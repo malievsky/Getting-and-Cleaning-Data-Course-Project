@@ -25,9 +25,9 @@ object.size(testData) # 13285048 bytes
  
  Step 1
 The "Subject" and "Activity" values added to "Features" data frame 
-next, the "...Subject" and "...Activity" columns added to both train and test datasets
-neaxt, testData and trainData sets appended
-Appending of Test and Train data sets. Simple
+ next, the "...Subject" and "...Activity" columns added to both train and test datasets
+ next, testData and trainData sets appended
+Appending of Test and Train data sets. Simple.
 resulting Data dimension and size:
  dim(Data) # [1] 10299   563
  object.size(Data) # 46363336 bytes
@@ -35,19 +35,11 @@ resulting Data dimension and size:
  
  Step2
  First, function grep used twice to find all appearances of "mean" and "std"
- strings witih "features":
- meanCols <- grep("mean", features$V2)
- meanCols
- # [1]   1   2   3  41  42  43  81  82  83 121 122 123 161 162 163 201 214 227 240 253 266 267 268 294 295 296 345 346 347 373 374 375
- # [33] 424 425 426 452 453 454 503 513 516 526 529 539 542 552
- stdCols <- grep("std", features$V2)
- stdCols
- #[1]   4   5   6  44  45  46  84  85  86 124 125 126 164 165 166 202 215 228 241 254 269 270 271 348 349 350 427 428 429 504 517 530
- #[33] 543
+ strings witih "features".
  
  Second, the vectors used to subset Data:
- meanMeasurements <- Data[, meanCols]
- dim(meanMeasurements) # [1] 10299    46
+ > meanMeasurements <- Data[, meanCols]
+ > dim(meanMeasurements) # [1] 10299    46
  
  Step3
  function "names" used to assign "variables" dataset  as headers to "Data" frame
@@ -56,8 +48,9 @@ resulting Data dimension and size:
 [4] "angle(Z,gravityMean)"                 "Subject"                              "Activity"    
 
  Step4
- function merge used to add another column to dataset.
- (from the table "activity_type")
+ Content replacement for the variavle "Activity"
  
  Step5
+ 
+ 
  

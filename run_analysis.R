@@ -51,7 +51,13 @@ stdMeasurements <- Data[, stdCols]
 names(Data) <- features[, 2]
 
 
-## Step 4 - merging the 
+## Step 4 - replace activity column values
+Data$Activity[Data1$Activity %in% "1"] <- "WALKING"
+Data$Activity[Data1$Activity %in% "2"] <- "WALKING_UPSTAIRS"
+Data$Activity[Data1$Activity %in% "3"] <- "WALKING_DOWNSTAIRS"
+Data$Activity[Data1$Activity %in% "4"] <- "SITTING"
+Data$Activity[Data1$Activity %in% "5"] <- "STANDING"
+Data$Activity[Data1$Activity %in% "6"] <- "LAYING"
 
 ## Step 5:
 
