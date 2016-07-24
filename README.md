@@ -51,6 +51,12 @@ resulting Data dimension and size:
  Content replacement for the variavle "Activity"
  
  Step5
- 
+ used method "split -> sapply"
+ first, the data set splitted by Subject and Activity
+ then, the sapply function applied while list of columns - is original features data set
+ (just numeric values, without additions - just rereaded)
+ The result is  an objetc sized 561 x 180
+ Where 561 - number of numeric parameters in Data
+ 180 = 30 x 6  - number of splittings (30 persons multiple 6 activity types)
  
  
