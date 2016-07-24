@@ -59,7 +59,7 @@ Data$Activity[Data1$Activity %in% "4"] <- "SITTING"
 Data$Activity[Data1$Activity %in% "5"] <- "STANDING"
 Data$Activity[Data1$Activity %in% "6"] <- "LAYING"
 
-## Step 5:
+## Step 5: splitting and mean calculation for 561 (from 563) columns
 DataSplit <- split(Data, list(Data$Subject, Data$Activity))
 featuresO <- read.table("./data/UCI HAR Dataset/features.txt", header = FALSE, stringsAsFactors = FALSE)
 meanBySubjActivity <- sapply(DataSplit, function(x) colMeans(x[, featuresO[, 2]], na.rm = TRUE))
