@@ -3,7 +3,7 @@
 
 Step0 (preparatory)
 
-It includes data reading + checking for reasult DataFrame dimensions/object sizes (to not overload the RAM)
+Data reading from files + checking for result DataFrame dimensions/object sizes (in order to avoid RAM overload)
 Next dataframes created from provided files:
 
 - features, [1] 561  2
@@ -21,10 +21,9 @@ Note: all dataframe sizes get by using of dim comnad as in example below:
 dim(testData) #[1] 2947  561
 object.size(testData) # 13285048 bytes
 
-
  
  Step 1
-The "Subject" and "Activity" values added to "Features" data frame 
+The "Subject" and "Activity" variables added to "Features" data frame 
  next, the "...Subject" and "...Activity" columns added to both train and test datasets
  next, testData and trainData sets appended
 Appending of Test and Train data sets. Simple.
